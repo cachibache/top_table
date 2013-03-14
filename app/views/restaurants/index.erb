@@ -1,16 +1,11 @@
 <h1> List of Restaurants </h1>
 
-<ul> 
-<li> 1, Nandos </li>
-<li> 2, Strada </li>
-</ul>
+<h3> There are <%= @restaurants.length %> restaurants in our list. </h3>
 
-<!-- <form action="restaurants">
-	<p>Add the name of the restaurant</p>
-	<input type="text" name="Restaurant Name" />
-	<input type="submit" name="create restaurant" value ="Create Restaurant" />
-</form>
- -->
+<ul> <% @restaurants.each do |r| %>
+		<li> <%= r.name %> </li>
+	 <% end %>
+</ul>
 
 <div>
  	<%= form_for(:restaurant) do |f| %>
@@ -20,3 +15,7 @@
 	  <%= f.submit "Create Restaurant" %>
 	<% end %>
 </div>
+
+
+
+
