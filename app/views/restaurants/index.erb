@@ -1,0 +1,22 @@
+<h1> List of Restaurants </h1>
+
+<ul> 
+<li> 1, Nandos </li>
+<li> 2, Strada </li>
+</ul>
+
+<!-- <form action="restaurants">
+	<p>Add the name of the restaurant</p>
+	<input type="text" name="Restaurant Name" />
+	<input type="submit" name="create restaurant" value ="Create Restaurant" />
+</form>
+ -->
+
+<div>
+ 	<%= form_for(:restaurant) do |f| %>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+
+	  <%= f.submit "Create Restaurant" %>
+	<% end %>
+</div>

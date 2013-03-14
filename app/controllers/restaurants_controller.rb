@@ -10,6 +10,7 @@ class RestaurantsController < ApplicationController
   end
 
   def create
+    # raise params.inspect
     @restaurant = Restaurant.new(params[:restaurant])
     if @restaurant.save
       flash[:success] = "Added a new Restaurant"
