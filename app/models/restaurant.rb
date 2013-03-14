@@ -1,13 +1,13 @@
-class Restaurant < ActiveRecord::Base
-
 # == Schema Information
 #
-# Table name: restaurant
+# Table name: restaurants
+#
+#  id   :integer          not null, primary key
+#  name :string(255)      not null
+#
 
-#id       :integer
-#name     :string
+class Restaurant < ActiveRecord::Base
 
-
-
+  attr_accessible :name
 
 end
