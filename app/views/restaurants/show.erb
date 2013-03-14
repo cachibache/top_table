@@ -1,13 +1,16 @@
 <h1><%= @restaurant.name %></h1>
 
-<ul> <% @restaurant.id do |r| %>
-		<li> <%= r.review %> </li>
+<div>
+<ul> <% @restaurant.reviews.each do |review| %>
+		<li> <%= review.title %> </li>
+	 	<li> <%= review.body %> </li>
 	 <% end %>
 </ul>
+</div>
 
 
 <div>
- 	<%= form_for(:review) do |f| %>
+ 	<%= form_for(@review) do |f| %>
 		<%= f.label :title %>
 		<%= f.text_field :title %> <br />
 

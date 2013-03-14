@@ -22,6 +22,7 @@ class RestaurantsController < ApplicationController
 
   def show
     @restaurant = Restaurant.find_by_id(params[:id])
+    @review = Review.new
     # if @restaurant.nil?
     #   @restaurants = Restaurant.find(:all)
     #   render "index"

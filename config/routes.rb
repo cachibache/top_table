@@ -1,9 +1,11 @@
 TopTable::Application.routes.draw do
 
-  resources :restaurants
-  resources :reviews
-
+  resources :restaurants do
+    resources :reviews
+  end
   
+  # match "/restaurants/:id" => "restaurants#show"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
