@@ -1,2 +1,19 @@
-<p>New restaurant created!</p>
+<h1><%= @restaurant.name %></h1>
 
+<ul> <% @restaurant.id do |r| %>
+		<li> <%= r.review %> </li>
+	 <% end %>
+</ul>
+
+
+<div>
+ 	<%= form_for(:review) do |f| %>
+		<%= f.label :title %>
+		<%= f.text_field :title %> <br />
+
+		<%= f.label :body %>
+		<%= f.text_area :body %>
+
+	  <%= f.submit "Add Review" %>
+	<% end %>
+</div>

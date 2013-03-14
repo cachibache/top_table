@@ -1,7 +1,9 @@
 TopTable::Application.routes.draw do
 
   resources :restaurants
+  resources :reviews
 
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
