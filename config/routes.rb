@@ -1,5 +1,7 @@
 TopTable::Application.routes.draw do
 
+  resources :cuisines
+
   resources :restaurants do
     resources :reviews
   end
